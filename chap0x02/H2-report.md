@@ -88,7 +88,7 @@
 
     ping www.baidu.com &  
     此时CTRL C无法终止命令 需要打开另外一个终端 输入命令ps aux |grep ping 再kill 所显示编号 回到原来的终端再CTRL C  (如下图)
-![kill_ping &](/img/kill_ping%20%26.jpg "kill_ping &")
+![kill_ping &](img/kill_ping%20%26.jpg "kill_ping &")
 
     ping www.baidu.com 1>/dev/null 2>&1 &  
 
@@ -142,29 +142,33 @@
     实验中的有些操作需要**管理员权限**     
     若不在最前面加sudo就会出现如图所示的 permission denied的问题 
     解决方法：以管理员身份发出指令   
-    ![permission denied](/img/permission_denied.jpg "permission denied")   
+    ![permission denied](img/permission_denied.jpg "permission denied")   
 
 2.  CentOS中软件安装问题  
     有些软件在CentOS中没有安装包(no package *** available)
     需要通过其他方式进行下载安装  
 
     如tshark  
-    ![tshark_download_problem](/img/tshark_download_problem.jpg "tshark_download")  
+    ![tshark_download_problem](img/tshark_download_problem.jpg "tshark_download")  
     解决方法：
     首先安装epel扩展源: yum install -y epel-release
     接着安装wireshark: yum install -y wireshark
     最后查看tshark版本: tshark -v
-    ![install_epel](/img/tshark_download_solution_step1.jpg "install_epel")
-    ![install_wirechark&check_tshark](/img/tshark_download_solution_step2.jpg "install_wirechark&check_tshark")
+    ![install_epel](img/tshark_download_solution_step1.jpg "install_epel")
+    ![install_wirechark&check_tshark](img/tshark_download_solution_step2.jpg "install_wirechark&check_tshark")
 
     如rar  
-    ![rar_download_problem](/img/rar_download_problem.jpg "rar_download_problem")  
+    ![rar_download_problem](img/rar_download_problem.jpg "rar_download_problem")  
     解决方法：
     **首先进行*更新***： sudo yum update
     接着从官网上下载压缩包： wget http://www.rarlab.com/rar/rarlinux-x64-4.2.0.tar.gz
     最后解压缩： tar zxvf rarlinux-x64-4.2.0.tar.gz
-    ![rar_download_solution](/img/rar_download_solution.jpg "rar_download_solution")  
+    ![rar_download_solution](img/rar_download_solution.jpg "rar_download_solution")  
    
+3.  图片渲染问题
+    在本地md文件中图片可以正常渲染，但在Github中无法显示
+    经同学的指导 将原本 (/img/*.jig) 中img前的 **/去掉** 或在 **/前加.** 。
+
 
 #   参考链接      
  
