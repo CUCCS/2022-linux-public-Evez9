@@ -1,13 +1,13 @@
-#   实验目的与自评 
+#   实验目的与自评   
 
  - 目的：建立shell脚本编程基础
  - 自评：本次实验代码部分参考较多，自主编程能力还需锻炼提升，总体上完成了每项任务，但未能构建自己的Travis仓库
 
 
 
-#   实验步骤与结果
+#   实验步骤与结果  
 
-**实验环境** 
+**实验环境**   
 - 虚拟机：Virtualbox Ubuntu 20.04 Server 64bit (老师给的百度云链接)
 - 操作平台：VScode远程连接到虚拟机
 
@@ -124,16 +124,23 @@ convert "${img}" "$new_img"
   - 描述：在任务一中对图片进行处理，已经将图片和bash文件放在一个文件夹中，却显示`Not a directory`
   - 分析：通过查询此段函数的源代码发现此处不应该写文件名，而应该写文件所在的文件夹路径
   - 解决：在bash文件所在的文件夹中再建立test_img文件夹，将需要进行操作的图片放进去
-![](./img/problem_not-a-directory.jpg)
-![](./img/problem_analyse%26solution.jpg)
+  ![not-a-directory](./img/problem_not-a-directory.jpg)
+  ![analyse&solution](./img/problem_analyse%26solution.jpg)
 
 - 问题二
   - 描述：在提交作业时push失败
   - 分析：存在文件大小超过100MB
-  - 解决：发现该文件并非报告文件，而是原始数据，故选择删除
-![](./img/push_error.jpg)
+  - 解决：发现该文件并非报告文件，而是原始数据，故选择使用`git filer-branch`删除
+  ![push_error](./img/push_error.jpg)
+  ![solution](./img/push_error_solution.jpg)
+
+
+
 #   参考链接  
-[CUCCS/2021-linux-public-kal1x/chap0x04](https://github.com/CUCCS/2021-linux-public-kal1x/tree/chap0x04/chap0x04)
-[shell命令行选项与参数处理--getopt](https://blog.csdn.net/u011285208/article/details/81194295)
-[Command-line Tools: Magick - ImageMagick](https://imagemagick.org/script/magick.php)
-[wget命令详解](https://www.cnblogs.com/sx66/p/11887022.html)
+[CUCCS/2021-linux-public-kal1x/chap0x04](https://github.com/CUCCS/2021-linux-public-kal1x/tree/chap0x04/chap0x04)  
+
+[shell命令行选项与参数处理--getopt](https://blog.csdn.net/u011285208/article/details/81194295)  
+
+[Command-line Tools: Magick - ImageMagick](https://imagemagick.org/script/magick.php)  
+
+[wget命令详解](https://www.cnblogs.com/sx66/p/11887022.html)  
